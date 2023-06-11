@@ -8,3 +8,12 @@
 - Facciamo inserire i numeri all'utente tramite 5 campi di input invece che via prompt.
 
 <hr>
+
+- CREO un numbers-container per il coundown e x i numeri
+- CREO un timer in pagina di 30 secondi
+- METTO IN EVIDENZA i numeri generati
+- SE il timer è uguale a 0 NASCONDO i numeri
+    * uso un PROMPT
+        - chiedo 5 numeri 5 volte
+        - controllo se i numeri sono corretti
+        - comunico se ha fatto tutto correttamente
