@@ -5,19 +5,44 @@ console.log('JS OK')
 - CREO un timer in pagina di 30 secondi
 - METTO IN EVIDENZA i numeri generati
 - SE il timer è uguale a 0 NASCONDO i numeri
-    * uso un PROMPT
-        - chiedo 5 numeri 5 volte
-        - controllo se i numeri sono corretti
-        - comunico se ha fatto tutto correttamente
+* uso un PROMPT
+- chiedo 5 numeri 5 volte
+- controllo se i numeri sono corretti
+- comunico se ha fatto tutto correttamente
 */
-//!FUNZIONI:
+
+//! FUNZIONI:
+
 //RANDOM NUMBER DA 1 a 99
 const randomNumber = (max) => {
     const randomNumber = Math.floor(Math.random() * max) + 1;
     return randomNumber;
 }
 
-//!OPERAZIONI INIZIALI:
+// Funzione per verificare i numeri inseriti
+const verifyNumbers = () => {
+    const enteredNumbers = [];
+    const guessedNumbers = [];
+
+    // Ottenere i numeri inseriti dall'utente
+    for (let i = 1; i <= 5; i++) {
+        const inputElement = document.getElementById(i.toString());
+        const number = inputElement.value;
+        enteredNumbers.push(number);
+    }
+
+    // Verificare se i numeri inseriti corrispondono a quelli generati
+    for (let i = 0; i < numbers.length; i++) {
+        if (enteredNumbers.includes(numbers[i].toString())) {
+            guessedNumbers.push(numbers[i]);
+        }
+    }
+
+    // Stampa il numero e l'elenco dei numeri indovinati
+    resultElement.innerText = `Hai indovinato ${guessedNumbers.length} numeri: ${guessedNumbers.join(', ')}`;
+}
+
+//!||||| --- OPERAZIONI INIZIALI:
 
 //Prendo gli elementi dal DOM:
 const countdownElement = document.getElementById('countdown');
@@ -30,7 +55,7 @@ const playButton = document.getElementById('play-button');
 // Stampo in pagina la partenza timer 
 countdownElement.innerText = 10;
 
-//!LOGICA:
+//!||||| --- LOGICA:
 
 // Servendomi di set interval cambio il valore del timer
 let timer = 10;
@@ -65,19 +90,5 @@ const countdownPause = setTimeout (function(){
     playButton.classList.remove('d-none');
 
 },10000);
-
-// Funzione per verificare i numeri inseriti
-const verifyNumbers = () => {
-    const enteredNumbers = [];
-    const guessedNumbers = [];
-
-    // Ottenere i numeri inseriti dall'utente
-    for (let i = 1; i <= 5; i++) {
-        const inputElement = document.getElementById(i.toString());
-        const number = inputElement.value;
-        enteredNumbers.push(number);
-    }
-
-}  
 
 playButton.addEventListener('click', verifyNumbers);
