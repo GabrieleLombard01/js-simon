@@ -79,3 +79,5 @@ const verifyNumbers = () => {
     }
 
 }  
+
+playButton.addEventListener('click', verifyNumbers);
