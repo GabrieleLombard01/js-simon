@@ -22,4 +22,13 @@ const resultElement = document.getElementById('risultato');
 const refreshButton = document.getElementById('refresh-button');
 const playButton = document.getElementById('play-button');
 
+// Stampo in pagina la partenza timer 
+countdownElement.innerText = 10;
 
+// Servendomi di set interval cambio il valore del timer
+let timer = 10;
+const countdown = setInterval (function() {
+    // Stampo in pagina il valore di partenza del timer 
+    countdownElement.innerText = 10;
+    countdownElement.innerText = -- timer;
+},1000);
