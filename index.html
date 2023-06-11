@@ -23,8 +23,23 @@
     <title>Document</title>
 </head>
 <body>
-      <h1>Random Numbers</h1>
-      <div id="numbers-container"></div>
+      <div class="mx-auto mt-5" id="numbers-container">
+            <h1 id="countdown" class="text-center"></h1>
+            <h3 class="text-center">Random Numbers:</h3>
+            <p id="number-list"></p>
+            <div id="input" class="text-center">
+                  <input type="number" id="1" max="99" min="1" >
+                  <input type="number" id="2" max="99" min="1" >
+                  <input type="number" id="3" max="99" min="1" >
+                  <input type="number" id="4" max="99" min="1" >
+                  <input type="number" id="5" max="99" min="1" >
+            </div>
+            <p id="risultato"></p>
+            <div class="justify-content-center d-flex">
+                  <button id="play-button" class="" type="button">Verifica</button>
+                  <button id="refresh-button" class="" type="button">Refresh</button>
+            </div>
+      </div>
       <p id="timer-display"></p>
 <!--! -MY JS- -->
 <script src="js/script.js"></script>

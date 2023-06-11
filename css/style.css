@@ -1,13 +1,30 @@
 /*CSS reset*/
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/*Custom properties*/
-
+/*Pseudo classes*/
+#numbers-container button:hover{
+    background-color: black;
+}
 /*Generics*/
-
+input{
+    border-radius: 5px;
+    border: solid rgb(0, 174, 255) 3px;
+}
+#numbers-container button{
+    border-radius: 5px;
+    border: solid rgb(0, 174, 255) 3px;
+    padding: 2px 8px;
+    background-color: rgb(66, 66, 66);
+    color: rgb(245, 255, 173);
+    margin: 10px auto 10px auto;
+}
 /*Utilties*/
+#numbers-container{
+    width: 800px;
+    background-color: rgb(57, 153, 198);
+    border-radius: 15px;
+    color: rgb(245, 255, 173);
+}
