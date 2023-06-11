@@ -65,3 +65,17 @@ const countdownPause = setTimeout (function(){
     playButton.classList.remove('d-none');
 
 },10000);
+
+// Funzione per verificare i numeri inseriti
+const verifyNumbers = () => {
+    const enteredNumbers = [];
+    const guessedNumbers = [];
+
+    // Ottenere i numeri inseriti dall'utente
+    for (let i = 1; i <= 5; i++) {
+        const inputElement = document.getElementById(i.toString());
+        const number = inputElement.value;
+        enteredNumbers.push(number);
+    }
+
+}  
