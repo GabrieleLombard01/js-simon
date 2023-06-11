@@ -40,3 +40,28 @@ const countdown = setInterval (function() {
     countdownElement.innerText = -- timer;
 },1000);
 
+let numbers = [];
+//FOR x 5 numeri random 
+for (let i = 0; i < 5; i++){
+    numbers.push(randomNumber(99));
+}
+
+let numbersList = `<ul>`
+// Stampo in un UL i numeri
+for (let i = 0; i < 5; i++){
+    numbersList += `<li>${numbers[i]}</li>`
+}
+numbersList += `</ul>`
+
+numberListElement.innerHTML = numbersList;
+
+//Sfrutto classList per giocare col display
+const countdownPause = setTimeout (function(){
+    timer = 0;
+    countdownElement.innerText = timer;
+    clearInterval(countdown);
+    numberListElement.classList.add('d-none');
+    inputsElement.classList.remove('d-none');
+    playButton.classList.remove('d-none');
+
+},10000);
