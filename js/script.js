@@ -11,6 +11,11 @@ console.log('JS OK')
         - comunico se ha fatto tutto correttamente
 */
 //!FUNZIONI:
+//RANDOM NUMBER DA 1 a 99
+const randomNumber = (max) => {
+    const randomNumber = Math.floor(Math.random() * max) + 1;
+    return randomNumber;
+}
 
 //!OPERAZIONI INIZIALI:
 
@@ -25,6 +30,8 @@ const playButton = document.getElementById('play-button');
 // Stampo in pagina la partenza timer 
 countdownElement.innerText = 10;
 
+//!LOGICA:
+
 // Servendomi di set interval cambio il valore del timer
 let timer = 10;
 const countdown = setInterval (function() {
@@ -32,3 +39,4 @@ const countdown = setInterval (function() {
     countdownElement.innerText = 10;
     countdownElement.innerText = -- timer;
 },1000);
+
